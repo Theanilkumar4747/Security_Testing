@@ -1,0 +1,6 @@
+com\company\security\sast\SastScanTest.class
+com\company\security\api\ApiSecurityTest.class
+com\company\security\api\BsscApiContractTest.class
+com\company\security\dast\DastScanTest.class
+com\company\security\model\TargetTest.class
+com\company\security\regression\SecurityRegressionTest.class

@@ -1,0 +1,99 @@
+# Which scanners run by default. --scanners=a,b on the CLI overrides "enabled".
+# Options are passed to the scanner as strings (see each scanner class for supported keys).
+scanners:
+
+  # ---------------- SAST ----------------
+  semgrep:
+    enabled: true
+    timeoutMinutes: 15
+    options:
+      config: classpath:rules/semgrep-rules.yaml   # or "auto", "p/owasp-top-ten"
+  sonarqube:
+    enabled: false          # needs SONAR_TOKEN + a running SonarQube server
+    timeoutMinutes: 30
+    options:
+      projectKey: my-app
+  checkmarx:
+    enabled: false          # needs CX_CLIENT_ID / CX_CLIENT_SECRET / CX_BASE_URI
+    timeoutMinutes: 45
+    options:
+      branch: main
+
+  # ---------------- SCA ----------------
+  trivy:
+    enabled: true
+    timeoutMinutes: 15
+    options:
+      scanners: vuln,secret,misconfig
+      severity: LOW,MEDIUM,HIGH,CRITICAL
+      ignoreUnfixed: "false"
+  owasp-dependency-check:
+    enabled: false
+    timeoutMinutes: 30
+  snyk:
+    enabled: false          # needs SNYK_TOKEN
+    timeoutMinutes: 15
+
+  # ---------------- DAST (only against hosts in scan.allowed.hosts) ----------------
+  zap:
+    enabled: false
+    timeoutMinutes: 45
+    options:
+      mode: baseline        # baseline (passive) | api | full (ACTIVE attack - own systems only)
+      spiderMinutes: "3"
+  nuclei:
+    enabled: false
+    timeoutMinutes: 30
+    options:
+      severity: medium,high,critical
+  burp:
+    enabled: false          # needs a running Burp Pro with REST API (burp.api.url / burp.api.key)
+    timeoutMinutes: 90
+
+  # ---------------- API ----------------
+  restassured-security-tests:
+    enabled: false
+    timeoutMinutes: 10
+    options:
+      paths: /,/api/health
+      protectedPaths: /api/users/me
+      # errorPath: /api/echo
+      # probePath: /api/search
+  owasp-api-top10:
+    enabled: false
+    timeoutMinutes: 10
+    options:
+      protectedPaths: /api/users/me
+      adminPaths: /api/admin/users
+      rateLimitPath: /api/health
+      burst: "30"
+      # bolaPathTemplate: /api/orders/{id}
+      # idOwnedByA: "1001"
+  schemathesis:
+    enabled: false
+    timeoutMinutes: 30
+    options:
+      maxExamples: "50"
+
+  # ---------------- Secrets ----------------
+  gitleaks:
+    enabled: true
+    timeoutMinutes: 10
+  trufflehog:
+    enabled: false
+    timeoutMinutes: 15
+    options:
+      onlyVerified: "false"
+
+  # ---------------- Cloud / IaC ----------------
+  checkov:
+    enabled: true
+    timeoutMinutes: 10
+  kube-bench:
+    enabled: false
+    timeoutMinutes: 10
+  prowler:
+    enabled: false
+    timeoutMinutes: 60
+    options:
+      provider: aws

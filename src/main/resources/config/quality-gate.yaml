@@ -1,0 +1,25 @@
+# Build fails (exit code 1) when any limit is exceeded. -1 = unlimited.
+gate:
+  failOnScannerError: false      # true = a scanner that crashed also fails the gate
+
+  maxAllowed:                    # applies to ALL findings combined
+    CRITICAL: 0
+    HIGH: 0
+    MEDIUM: 25
+    LOW: -1
+    INFO: -1
+
+  perCategory:                   # stricter limits for specific categories
+    SECRETS:
+      CRITICAL: 0
+      HIGH: 0
+      MEDIUM: 0
+    DAST:
+      CRITICAL: 0
+      HIGH: 0
+
+  # Accepted risks. Match on finding id, CVE or fingerprint. Always set an expiry and a reason.
+  suppressions: []
+  #  - id: CVE-2024-12345
+  #    expires: 2026-12-31
+  #    reason: "No fix available; not reachable (ticket SEC-123)"

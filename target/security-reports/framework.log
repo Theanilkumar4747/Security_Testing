@@ -1,0 +1,12 @@
+2026-11-10T18:33:39,321 INFO  [main] com.company.security.scanners.api.RestAssuredSecurityTests - restassured-security-tests started
+2026-11-10T18:33:40,521 INFO  [main] com.company.security.scanners.api.RestAssuredSecurityTests - restassured-security-tests finished in 1215 ms with 5 findings
+2026-11-10T18:33:40,608 INFO  [main] com.company.security.scanners.api.OwaspApiTop10Checks - owasp-api-top10 started
+2026-11-10T18:33:41,002 INFO  [main] com.company.security.scanners.api.OwaspApiTop10Checks - owasp-api-top10 finished in 395 ms with 11 findings
+2026-11-10T18:33:41,035 WARN  [main] com.company.security.scanners.api.OwaspApiTop10Checks - owasp-api-top10 refused to scan an unauthorized target host '127.0.0.1'
+2026-11-10T18:33:41,307 WARN  [main] com.company.security.scanners.dast.ZAPScanner - zap refused to scan an unauthorized target host 'not-allowed.example.org'
+2026-11-11T13:26:48,929 INFO  [main] com.company.security.scanners.api.RestAssuredSecurityTests - restassured-security-tests started
+2026-11-11T13:26:50,425 INFO  [main] com.company.security.scanners.api.RestAssuredSecurityTests - restassured-security-tests finished in 1541 ms with 5 findings
+2026-11-11T13:26:50,562 INFO  [main] com.company.security.scanners.api.OwaspApiTop10Checks - owasp-api-top10 started
+2026-11-11T13:26:51,021 INFO  [main] com.company.security.scanners.api.OwaspApiTop10Checks - owasp-api-top10 finished in 459 ms with 11 findings
+2026-11-11T13:26:51,053 WARN  [main] com.company.security.scanners.api.OwaspApiTop10Checks - owasp-api-top10 refused to scan an unauthorized target host '127.0.0.1'
+2026-11-11T15:26:57,858 WARN  [main] com.company.security.scanners.dast.ZAPScanner - zap refused to scan an unauthorized target host 'not-allowed.example.org'

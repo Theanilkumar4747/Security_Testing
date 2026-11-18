@@ -1,0 +1,53 @@
+rules:
+  - id: java-sql-string-concat
+    languages: [java]
+    severity: ERROR
+    message: SQL built by string concatenation. Use PreparedStatement with bound parameters.
+    metadata:
+      cwe: "CWE-89: SQL Injection"
+    pattern-either:
+      - pattern: $STMT.executeQuery($X + ...)
+      - pattern: $STMT.execute($X + ...)
+      - pattern: $STMT.executeUpdate($X + ...)
+
+  - id: java-weak-hash
+    languages: [java]
+    severity: WARNING
+    message: Weak hash algorithm. Use SHA-256 or stronger (and bcrypt/argon2 for passwords).
+    metadata:
+      cwe: "CWE-327: Use of a Broken or Risky Cryptographic Algorithm"
+    pattern-either:
+      - pattern: MessageDigest.getInstance("MD5")
+      - pattern: MessageDigest.getInstance("SHA-1")
+      - pattern: MessageDigest.getInstance("SHA1")
+
+  - id: java-hardcoded-credential
+    languages: [java]
+    severity: ERROR
+    message: Possible hard-coded credential. Load secrets from a vault or environment.
+    metadata:
+      cwe: "CWE-798: Use of Hard-coded Credentials"
+    patterns:
+      - pattern: String $VAR = "...";
+      - pattern-not: String $VAR = "";
+      - metavariable-regex:
+          metavariable: $VAR
+          regex: (?i).*(password|passwd|secret|api_?key|token).*
+
+  - id: java-command-injection
+    languages: [java]
+    severity: ERROR
+    message: OS command built from dynamic input. Avoid shells; pass a fixed argument list.
+    metadata:
+      cwe: "CWE-78: OS Command Injection"
+    pattern-either:
+      - pattern: Runtime.getRuntime().exec($X + ...)
+      - pattern: new ProcessBuilder($X + ...)
+
+  - id: java-insecure-random
+    languages: [java]
+    severity: WARNING
+    message: java.util.Random is predictable. Use SecureRandom for tokens, ids and keys.
+    metadata:
+      cwe: "CWE-330: Use of Insufficiently Random Values"
+    pattern: new java.util.Random(...)
