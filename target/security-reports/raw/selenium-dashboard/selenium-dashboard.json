@@ -1,0 +1,15 @@
+{
+  "url" : "https://pp-dev.veportal.in/client/dashboard",
+  "title" : "Pravesh Prahari",
+  "currentUrl" : "https://pp-dev.veportal.in/login",
+  "bodyText" : "प्रवेश प्रहरी\nVENSYSCO · EXAMINATION INFRASTRUCTURE\nPravesh Prahari\n\nBegin your examination journey with confidence — manage centres, operators and exam-day operations from one dashboard.\n\nCLIENT PORTAL\n\nWelcome\n\nPlease enter your credentials to access your account.\n\nEmail Address\nPassword\nRemember me\nReset Password?\nSign In\n\nYour session is Protected end to end.",
+  "sqlInjectionTested" : true,
+  "sqlInjectionResult" : "No database error signature detected after a single quote probe",
+  "sqlInjectionError" : null,
+  "sqlInjectionLocation" : "https://pp-dev.veportal.in/login",
+  "screenshot" : "C:\\Users\\pc\\Downloads\\security-automation-framework\\security-automation-framework\\target\\security-reports\\raw\\selenium-dashboard\\veportal-dashboard.png",
+  "browserLaunchMs" : 3543,
+  "statusCode" : 200,
+  "hsts" : null,
+  "nosniff" : null
+}

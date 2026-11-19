@@ -1,0 +1,124 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Security Scan Report - application</title><style>:root{color-scheme:light;--ink:#202938;--muted:#697586;--line:#e3e8ef;--blue:#4263eb}*{box-sizing:border-box}body{margin:0;background:#f4f6fa;color:var(--ink);font:14px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}.top{background:#172554;color:#fff;padding:28px max(24px,calc((100% - 1180px)/2))}.top h1{margin:0;font-size:25px}.meta{color:#cbd5e1;margin-top:8px;overflow-wrap:anywhere}main{max-width:1180px;margin:24px auto;padding:0 20px}.summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}.box,.panel,.test{background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 2px 8px #1725540a}.box{padding:16px 18px}.label{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em}.value{font-size:26px;font-weight:700;margin-top:4px}.PASSED{color:#16803c}.FAILED{color:#c92a2a}.SKIPPED{color:#687385}.sev-CRITICAL{color:#a20d25}.sev-HIGH{color:#d12e35}.sev-MEDIUM{color:#a56b00}.sev-LOW{color:#1769aa}.sev-INFO{color:#687385}section{margin-top:24px}h2{font-size:18px;margin:0 0 12px}.panel{padding:18px}.tests{display:grid;gap:10px}.test{padding:14px 16px;box-shadow:none}.test-head{display:flex;justify-content:space-between;gap:12px;align-items:center}.test-name{font-weight:650;font-size:15px}.pill{border-radius:999px;padding:3px 10px;font-size:12px;font-weight:700;background:#eef1f5}.details{color:var(--muted);margin-top:6px}.message{margin-top:8px;padding:8px 10px;background:#f7f8fa;border-radius:6px;overflow-wrap:anywhere}.charts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:14px}.chart{min-width:0}.chart svg{display:block;width:100%;height:auto;max-height:420px}.chart text{font-family:system-ui,-apple-system,Segoe UI,sans-serif}.guidance{color:var(--muted);margin:0 0 12px}.priority{border-left:4px solid #d12e35;padding:12px 14px;margin:10px 0;background:#fff8f8;border-radius:4px}.priority h3{margin:0 0 5px;font-size:15px}.priority p{margin:5px 0}.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:12px}.filters input,.filters select,.tracker-fields input,.tracker-fields select{font:inherit;padding:8px 10px;border:1px solid #cbd5e1;border-radius:6px;min-width:150px}.tracker-tools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:8px 0 14px}.tracker-tools button{font:inherit;padding:8px 12px;border:1px solid #cbd5e1;border-radius:6px;background:#fff;cursor:pointer}.tracker-fields{display:flex;gap:12px;flex-wrap:wrap;padding:12px 0}.tracker-fields label{display:grid;gap:4px}.tracker-message{min-height:1.5em;color:#1769aa}.detail-row>td{background:#f8fafc}.finding-details summary{cursor:pointer;color:#2850b8;font-weight:600}table{border-collapse:collapse;width:100%;font-size:13px}th,td{border-bottom:1px solid var(--line);padding:10px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.04em}footer{color:var(--muted);font-size:12px;padding:28px 0}@media(max-width:650px){main{padding:0 12px}.panel{overflow-x:auto}.top{padding:22px 16px}}</style></head><body><header class="top"><h1>Security Scan Report</h1><div class="meta">Target: <b>application</b> &middot; URL: https://pp-dev.veportal.in/client/dashboard &middot; Run ID: da52c1eb</div><div class="meta">Started 2026-11-18T12:52:58.637231500Z &middot; Finished 2026-11-18T12:53:06.030376500Z &middot; Duration 7.39 s</div></header><main><div class="summary"><div class="box"><div class="label">Overall result</div><div class="value PASSED">PASSED</div></div><div class="box"><div class="label">Scanners passed</div><div class="value PASSED">1</div></div><div class="box"><div class="label">Scanners failed</div><div class="value ">0</div></div><div class="box"><div class="label">Scanners skipped</div><div class="value SKIPPED">0</div></div><div class="box"><div class="label">Total findings</div><div class="value ">3</div></div><div class="box"><div class="label">INFO findings</div><div class="value sev-INFO">1</div></div><div class="box"><div class="label">LOW findings</div><div class="value sev-LOW">0</div></div><div class="box"><div class="label">MEDIUM findings</div><div class="value sev-MEDIUM">2</div></div><div class="box"><div class="label">HIGH findings</div><div class="value sev-HIGH">0</div></div><div class="box"><div class="label">CRITICAL findings</div><div class="value sev-CRITICAL">0</div></div></div><section><h2>Visual summary</h2><div class="charts"><div class="panel chart"><h3>Findings by severity</h3><svg viewBox="0 0 640 250" role="img" aria-label="Bar chart of findings by severity"><text x="4" y="39" fill="#202938" font-size="13">CRITICAL</text><rect x="105" y="22" width="0" height="25" rx="5" fill="#a20d25"/><text x="115" y="40" fill="#202938" font-size="13">0</text><text x="4" y="83" fill="#202938" font-size="13">HIGH</text><rect x="105" y="66" width="0" height="25" rx="5" fill="#d12e35"/><text x="115" y="84" fill="#202938" font-size="13">0</text><text x="4" y="127" fill="#202938" font-size="13">MEDIUM</text><rect x="105" y="110" width="390" height="25" rx="5" fill="#a56b00"/><text x="505" y="128" fill="#202938" font-size="13">2</text><text x="4" y="171" fill="#202938" font-size="13">LOW</text><rect x="105" y="154" width="0" height="25" rx="5" fill="#1769aa"/><text x="115" y="172" fill="#202938" font-size="13">0</text><text x="4" y="215" fill="#202938" font-size="13">INFO</text><rect x="105" y="198" width="195" height="25" rx="5" fill="#687385"/><text x="310" y="216" fill="#202938" font-size="13">1</text></svg></div><div class="panel chart"><h3>Findings by scanner</h3><svg viewBox="0 0 640 80" role="img" aria-label="Bar chart of findings by scanner"><text x="4" y="31" fill="#202938" font-size="13">selenium-dashboard</text><rect x="145" y="14" width="390" height="25" rx="5" fill="#4263eb"/><text x="545" y="32" fill="#202938" font-size="13">3</text></svg></div></div></section><section><h2>How to read this report</h2><div class="panel"><p class="guidance"><b class="sev-CRITICAL">Critical:</b> address immediately. <b class="sev-HIGH">High:</b> fix as soon as possible. <b class="sev-MEDIUM">Medium:</b> plan a timely fix. <b class="sev-LOW">Low:</b> improve when practical. <b class="sev-INFO">Info:</b> review for context.</p></div></section><section><h2>Start here: highest-priority fixes</h2><div class="panel">No Critical or High findings. Review the remaining findings below.</div></section><section><h2>Execution details</h2><div class="tests"><article class="test"><div class="test-head"><span class="test-name">selenium-dashboard <span class="details">&middot; DAST</span></span><span class="pill SUCCESS">SUCCESS</span></div><div class="details">3 finding(s) &middot; 7.39 s</div></article></div></section><section><h2>Quality gate</h2><div class="panel"><b class="PASSED">PASSED</b> &middot; 0 finding(s) suppressed</div></section><section id="findings"><h2>All findings</h2><div class="panel" id="finding-panel" data-tracker-scope="ee18c968ff487b38"><p class="guidance">Finding status and ownership are saved in this browser. Export/import the tracker JSON to move them between browsers or reports.</p><div class="tracker-tools"><button id="export-tracker" type="button">Export tracker JSON</button><label>Import tracker JSON <input id="import-tracker" type="file" accept="application/json,.json"></label><span id="tracker-message" class="tracker-message" role="status" aria-live="polite"></span></div><label for="finding-search">Search findings</label><div class="filters"><input id="finding-search" type="search" placeholder="Search by title, endpoint, evidence, scanner, or fix"><select id="filter-severity" aria-label="Filter by severity"><option value="">All severities</option><option value="INFO">INFO</option><option value="LOW">LOW</option><option value="MEDIUM">MEDIUM</option><option value="HIGH">HIGH</option><option value="CRITICAL">CRITICAL</option></select><select id="filter-status" aria-label="Filter by tracking status"><option value="">All statuses</option><option value="Open">Open</option><option value="In Progress">In Progress</option><option value="Fixed">Fixed</option><option value="Accepted Risk">Accepted Risk</option><option value="False Positive">False Positive</option></select><select id="filter-scanner" aria-label="Filter by scanner"><option value="">All scanners</option><option value="selenium-dashboard">selenium-dashboard</option></select></div><table><thead><tr><th>Finding ID</th><th>Vulnerability</th><th>Severity</th><th>Endpoint</th><th>Evidence</th><th>Expected result</th><th>Actual result</th><th>Recommendation</th><th>Status</th></tr></thead><tbody><tr data-finding-row data-id="959a91e0a5abd5dd" data-status="Open" data-severity="MEDIUM" data-scanner="selenium-dashboard" data-endpoint="GET https://pp-dev.veportal.in/client/dashboard"><td>F-959A91E0A5ABD5DD<br><small>Rule: SELENIUM-HSTS-MISSING</small></td><td>Strict Transport Security header missing</td><td class="sev-MEDIUM"><b>MEDIUM</b></td><td>GET https://pp-dev.veportal.in/client/dashboard</td><td>Strict-Transport-Security response header: missing</td><td>Strict-Transport-Security: max-age=31536000</td><td>missing</td><td>Add Strict-Transport-Security with an appropriate max-age and preload policy.</td><td data-status-cell>Open</td></tr><tr class="detail-row" data-detail-row data-id="959a91e0a5abd5dd"><td colspan="9"><details class="finding-details"><summary>View details and update tracking</summary><p><b>Scanner:</b> selenium-dashboard &middot; <b>Category:</b> DAST &middot; <b>CVE/CWE:</b> Not provided by scanner</p><p><b>Description:</b> The HTTPS dashboard response does not include HSTS.</p><div class="tracker-fields"><label>Status<select data-field="status"><option value="Open" selected>Open</option><option value="In Progress">In Progress</option><option value="Fixed">Fixed</option><option value="Accepted Risk">Accepted Risk</option><option value="False Positive">False Positive</option></select></label><label>Owner<input data-field="owner" type="text" maxlength="120" placeholder="Assign an owner"></label><label>Due date<input data-field="dueDate" type="date"></label><label>Retest result<input data-field="retest" type="text" maxlength="500" placeholder="Not retested"></label></div></details></td></tr><tr data-finding-row data-id="8dd2f13c2a3d6ab8" data-status="Open" data-severity="MEDIUM" data-scanner="selenium-dashboard" data-endpoint="GET https://pp-dev.veportal.in/client/dashboard"><td>F-8DD2F13C2A3D6AB8<br><small>Rule: SELENIUM-NOSNIFF-MISSING</small></td><td>X-Content-Type-Options header missing</td><td class="sev-MEDIUM"><b>MEDIUM</b></td><td>GET https://pp-dev.veportal.in/client/dashboard</td><td>X-Content-Type-Options response header: missing</td><td>X-Content-Type-Options: nosniff</td><td>missing</td><td>Set X-Content-Type-Options to nosniff on HTTPS responses.</td><td data-status-cell>Open</td></tr><tr class="detail-row" data-detail-row data-id="8dd2f13c2a3d6ab8"><td colspan="9"><details class="finding-details"><summary>View details and update tracking</summary><p><b>Scanner:</b> selenium-dashboard &middot; <b>Category:</b> DAST &middot; <b>CVE/CWE:</b> Not provided by scanner</p><p><b>Description:</b> The dashboard response does not enforce MIME sniffing protection.</p><div class="tracker-fields"><label>Status<select data-field="status"><option value="Open" selected>Open</option><option value="In Progress">In Progress</option><option value="Fixed">Fixed</option><option value="Accepted Risk">Accepted Risk</option><option value="False Positive">False Positive</option></select></label><label>Owner<input data-field="owner" type="text" maxlength="120" placeholder="Assign an owner"></label><label>Due date<input data-field="dueDate" type="date"></label><label>Retest result<input data-field="retest" type="text" maxlength="500" placeholder="Not retested"></label></div></details></td></tr><tr data-finding-row data-id="a129e6a1868d439e" data-status="Open" data-severity="INFO" data-scanner="selenium-dashboard" data-endpoint="POST https://pp-dev.veportal.in/login"><td>F-A129E6A1868D439E<br><small>Rule: SELENIUM-SQLI-CHECKED</small></td><td>Login SQL injection error-disclosure probe completed</td><td class="sev-INFO"><b>INFO</b></td><td>POST https://pp-dev.veportal.in/login</td><td>One non-destructive single-quote input submitted; no database error signature detected</td><td>Generic authentication error without database details</td><td>No database error signature detected</td><td>For stronger assurance, review server-side parameterized queries and test in a dedicated authorized environment.</td><td data-status-cell>Open</td></tr><tr class="detail-row" data-detail-row data-id="a129e6a1868d439e"><td colspan="9"><details class="finding-details"><summary>View details and update tracking</summary><p><b>Scanner:</b> selenium-dashboard &middot; <b>Category:</b> DAST &middot; <b>CVE/CWE:</b> Not provided by scanner</p><p><b>Description:</b> A single-quote input and invalid password were submitted to the login form. No common database error signature was visible in the response; this does not prove the endpoint is free of SQL injection.</p><div class="tracker-fields"><label>Status<select data-field="status"><option value="Open" selected>Open</option><option value="In Progress">In Progress</option><option value="Fixed">Fixed</option><option value="Accepted Risk">Accepted Risk</option><option value="False Positive">False Positive</option></select></label><label>Owner<input data-field="owner" type="text" maxlength="120" placeholder="Assign an owner"></label><label>Due date<input data-field="dueDate" type="date"></label><label>Retest result<input data-field="retest" type="text" maxlength="500" placeholder="Not retested"></label></div></details></td></tr></tbody></table></div></section><footer>Generated by Security Automation Framework</footer></main><script>
+(() => {
+  const panel = document.getElementById('finding-panel');
+  const scope = panel.dataset.trackerScope;
+  const storageKey = 'security-report-tracker:' + scope;
+  const statuses = ['Open', 'In Progress', 'Fixed', 'Accepted Risk', 'False Positive'];
+  const message = document.getElementById('tracker-message');
+  let tracker = Object.create(null);
+  const rows = [...document.querySelectorAll('[data-finding-row]')];
+  const detailsFor = id => document.querySelector('[data-detail-row][data-id="' + id + '"]');
+  const say = text => { message.textContent = text; };
+  const normalize = value => {
+    if (!value || typeof value !== 'object' || Array.isArray(value)) throw new Error('Tracker data must be an object.');
+    const clean = Object.create(null);
+    Object.keys(value).forEach(id => {
+      const item = value[id];
+      if (!item || typeof item !== 'object' || Array.isArray(item)) throw new Error('Invalid tracker entry.');
+      clean[id] = {
+        status: statuses.includes(item.status) ? item.status : 'Open',
+        owner: typeof item.owner === 'string' ? item.owner.slice(0, 120) : '',
+        dueDate: typeof item.dueDate === 'string' ? item.dueDate.slice(0, 10) : '',
+        retest: typeof item.retest === 'string' ? item.retest.slice(0, 500) : ''
+      };
+    });
+    return clean;
+  };
+  const applyTracker = () => {
+    rows.forEach(row => {
+      const id = row.dataset.id;
+      const details = detailsFor(id);
+      const state = tracker[id];
+      if (!details || !state) return;
+      details.querySelector('[data-field="status"]').value = state.status;
+      details.querySelector('[data-field="owner"]').value = state.owner;
+      details.querySelector('[data-field="dueDate"]').value = state.dueDate;
+      details.querySelector('[data-field="retest"]').value = state.retest;
+      row.dataset.status = state.status;
+      row.querySelector('[data-status-cell]').textContent = state.status;
+    });
+  };
+  const filter = () => {
+    const term = document.getElementById('finding-search').value.toLowerCase();
+    const severity = document.getElementById('filter-severity').value;
+    const status = document.getElementById('filter-status').value;
+    const scanner = document.getElementById('filter-scanner').value;
+    rows.forEach(row => {
+      const detail = detailsFor(row.dataset.id);
+      const matches = (!term || (row.textContent + (detail?.textContent || '')).toLowerCase().includes(term))
+        && (!severity || row.dataset.severity === severity)
+        && (!status || row.dataset.status === status)
+        && (!scanner || row.dataset.scanner === scanner);
+      row.hidden = !matches;
+      if (detail) detail.hidden = !matches;
+    });
+  };
+  const persist = () => {
+    try {
+      localStorage.setItem(storageKey, JSON.stringify(tracker));
+      say('Tracker saved in this browser. Export JSON to keep a backup or share it.');
+    } catch (error) {
+      say('Could not save tracker in this browser: ' + error.message);
+    }
+  };
+  try {
+    const stored = localStorage.getItem(storageKey);
+    if (stored) tracker = normalize(JSON.parse(stored));
+    applyTracker();
+    if (stored) say('Saved tracker loaded from this browser.');
+  } catch (error) {
+    say('Saved tracker could not be loaded: ' + error.message + ' Import a valid tracker JSON to restore it.');
+  }
+  document.querySelectorAll('[data-field]').forEach(input => {
+    const saveField = () => {
+      const details = input.closest('[data-detail-row]');
+      const id = details.dataset.id;
+      const values = Object.fromEntries([...details.querySelectorAll('[data-field]')]
+        .map(field => [field.dataset.field, field.value]));
+      tracker[id] = {status: values.status, owner: values.owner, dueDate: values.dueDate, retest: values.retest};
+      applyTracker();
+      persist();
+      filter();
+    };
+    input.addEventListener('input', saveField);
+    input.addEventListener('change', saveField);
+  });
+  ['finding-search', 'filter-severity', 'filter-status', 'filter-scanner'].forEach(id =>
+    document.getElementById(id).addEventListener('input', filter));
+  document.getElementById('export-tracker').addEventListener('click', () => {
+    const data = JSON.stringify({schemaVersion: 1, targetScope: scope, findings: tracker}, null, 2);
+    const url = URL.createObjectURL(new Blob([data], {type: 'application/json'}));
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'security-findings-tracker-' + scope + '.json';
+    link.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    say('Tracker JSON exported.');
+  });
+  document.getElementById('import-tracker').addEventListener('change', event => {
+    const file = event.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        const imported = JSON.parse(reader.result);
+        if (imported.schemaVersion !== 1 || imported.targetScope !== scope) {
+          throw new Error('This tracker belongs to a different target or has an unsupported version.');
+        }
+        tracker = normalize(imported.findings);
+        applyTracker();
+        persist();
+        filter();
+      } catch (error) {
+        say('Tracker import failed: ' + error.message);
+      } finally {
+        event.target.value = '';
+      }
+    };
+    reader.onerror = () => say('Tracker import failed: the selected file could not be read.');
+    reader.readAsText(file);
+  });
+  filter();
+})();
+</script>
+</body></html>

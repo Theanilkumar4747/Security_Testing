@@ -1,0 +1,94 @@
+{
+  "$schema" : "https://json.schemastore.org/sarif-2.1.0.json",
+  "version" : "2.1.0",
+  "runs" : [ {
+    "tool" : {
+      "driver" : {
+        "name" : "selenium-dashboard",
+        "rules" : [ {
+          "id" : "SELENIUM-HSTS-MISSING",
+          "shortDescription" : {
+            "text" : "Strict Transport Security header missing"
+          },
+          "help" : {
+            "text" : "Add Strict-Transport-Security with an appropriate max-age and preload policy."
+          },
+          "properties" : {
+            "security-severity" : "5.5"
+          }
+        }, {
+          "id" : "SELENIUM-NOSNIFF-MISSING",
+          "shortDescription" : {
+            "text" : "X-Content-Type-Options header missing"
+          },
+          "help" : {
+            "text" : "Set X-Content-Type-Options to nosniff on HTTPS responses."
+          },
+          "properties" : {
+            "security-severity" : "5.5"
+          }
+        }, {
+          "id" : "SELENIUM-SQLI-CHECKED",
+          "shortDescription" : {
+            "text" : "Login SQL injection error-disclosure probe completed"
+          },
+          "help" : {
+            "text" : "For stronger assurance, review server-side parameterized queries and test in a dedicated authorized environment."
+          },
+          "properties" : {
+            "security-severity" : "0.5"
+          }
+        } ]
+      }
+    },
+    "results" : [ {
+      "ruleId" : "SELENIUM-HSTS-MISSING",
+      "level" : "warning",
+      "message" : {
+        "text" : "Strict Transport Security header missing - The HTTPS dashboard response does not include HSTS."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "https://pp-dev.veportal.in/client/dashboard"
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "959a91e0a5abd5dd"
+      }
+    }, {
+      "ruleId" : "SELENIUM-NOSNIFF-MISSING",
+      "level" : "warning",
+      "message" : {
+        "text" : "X-Content-Type-Options header missing - The dashboard response does not enforce MIME sniffing protection."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "https://pp-dev.veportal.in/client/dashboard"
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "8dd2f13c2a3d6ab8"
+      }
+    }, {
+      "ruleId" : "SELENIUM-SQLI-CHECKED",
+      "level" : "note",
+      "message" : {
+        "text" : "Login SQL injection error-disclosure probe completed - A single-quote input and invalid password were submitted to the login form. No common database error signature was visible in the response; this does not prove the endpoint is free of SQL injection."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "https://pp-dev.veportal.in/login"
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "a129e6a1868d439e"
+      }
+    } ]
+  } ]
+}

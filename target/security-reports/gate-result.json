@@ -1,0 +1,12 @@
+{
+  "passed" : true,
+  "violations" : [ ],
+  "counts" : {
+    "INFO" : 1,
+    "LOW" : 0,
+    "MEDIUM" : 2,
+    "HIGH" : 0,
+    "CRITICAL" : 0
+  },
+  "suppressed" : 0
+}

@@ -1,0 +1,85 @@
+{
+  "id" : "da52c1eb",
+  "startedAt" : "2026-11-18T12:52:58.637231500Z",
+  "finishedAt" : "2026-11-18T12:53:06.030376500Z",
+  "target" : {
+    "name" : "application",
+    "url" : "https://pp-dev.veportal.in/client/dashboard",
+    "sourcePath" : ".",
+    "imageName" : null,
+    "openApiSpec" : null,
+    "iacPath" : "."
+  },
+  "summary" : {
+    "total" : 3,
+    "bySeverity" : {
+      "INFO" : 1,
+      "LOW" : 0,
+      "MEDIUM" : 2,
+      "HIGH" : 0,
+      "CRITICAL" : 0
+    }
+  },
+  "scanners" : [ {
+    "scanner" : "selenium-dashboard",
+    "category" : "DAST",
+    "status" : "SUCCESS",
+    "durationMs" : 7386,
+    "findings" : 3
+  } ],
+  "vulnerabilities" : [ {
+    "id" : "SELENIUM-HSTS-MISSING",
+    "title" : "Strict Transport Security header missing",
+    "description" : "The HTTPS dashboard response does not include HSTS.",
+    "severity" : "MEDIUM",
+    "scanner" : "selenium-dashboard",
+    "category" : "DAST",
+    "location" : "https://pp-dev.veportal.in/client/dashboard",
+    "cwe" : null,
+    "cve" : null,
+    "remediation" : "Add Strict-Transport-Security with an appropriate max-age and preload policy.",
+    "evidence" : "Strict-Transport-Security response header: missing",
+    "expectedResult" : "Strict-Transport-Security: max-age=31536000",
+    "actualResult" : "missing",
+    "status" : "Open",
+    "httpMethod" : "GET",
+    "findingId" : "F-959A91E0A5ABD5DD",
+    "fingerprint" : "959a91e0a5abd5dd"
+  }, {
+    "id" : "SELENIUM-NOSNIFF-MISSING",
+    "title" : "X-Content-Type-Options header missing",
+    "description" : "The dashboard response does not enforce MIME sniffing protection.",
+    "severity" : "MEDIUM",
+    "scanner" : "selenium-dashboard",
+    "category" : "DAST",
+    "location" : "https://pp-dev.veportal.in/client/dashboard",
+    "cwe" : null,
+    "cve" : null,
+    "remediation" : "Set X-Content-Type-Options to nosniff on HTTPS responses.",
+    "evidence" : "X-Content-Type-Options response header: missing",
+    "expectedResult" : "X-Content-Type-Options: nosniff",
+    "actualResult" : "missing",
+    "status" : "Open",
+    "httpMethod" : "GET",
+    "findingId" : "F-8DD2F13C2A3D6AB8",
+    "fingerprint" : "8dd2f13c2a3d6ab8"
+  }, {
+    "id" : "SELENIUM-SQLI-CHECKED",
+    "title" : "Login SQL injection error-disclosure probe completed",
+    "description" : "A single-quote input and invalid password were submitted to the login form. No common database error signature was visible in the response; this does not prove the endpoint is free of SQL injection.",
+    "severity" : "INFO",
+    "scanner" : "selenium-dashboard",
+    "category" : "DAST",
+    "location" : "https://pp-dev.veportal.in/login",
+    "cwe" : null,
+    "cve" : null,
+    "remediation" : "For stronger assurance, review server-side parameterized queries and test in a dedicated authorized environment.",
+    "evidence" : "One non-destructive single-quote input submitted; no database error signature detected",
+    "expectedResult" : "Generic authentication error without database details",
+    "actualResult" : "No database error signature detected",
+    "status" : "Open",
+    "httpMethod" : "POST",
+    "findingId" : "F-A129E6A1868D439E",
+    "fingerprint" : "a129e6a1868d439e"
+  } ]
+}
