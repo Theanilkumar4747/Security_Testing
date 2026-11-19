@@ -32,8 +32,8 @@ java -jar target/security-framework.jar --categories=SAST,SCA,SECRETS,CLOUD --so
 java -jar target/security-framework.jar --scanners=semgrep,trivy,gitleaks
 
 # Dynamic scan of a staging system you own
-SCAN_ALLOWED_HOSTS=staging.example.com \
-java -jar target/security-framework.jar --scanners=zap,owasp-api-top10 --url=https://staging.example.com
+SCAN_ALLOWED_HOSTS=pp-dev.veportal.in \
+java -jar target/security-framework.jar --scanners=zap,selenium-dashboard,owasp-api-top10 --url=https://pp-dev.veportal.in/client/dashboard
 
 # Passive ZAP baseline scan of the configured login page (Docker required)
 java -jar target/security-framework.jar --scanners=zap --no-publish
@@ -71,6 +71,7 @@ Scanners whose tool is missing are **skipped** (not failed), so you can adopt to
 | DAST | `ZAPScanner` | Docker (official ZAP image) |
 | DAST | `NucleiScanner` | `nuclei` |
 | DAST | `BurpScanner` | Running Burp Pro with REST API (`BURP_API_URL`, `BURP_API_KEY`) |
+| DAST | `SeleniumDashboardScanner` | Chrome/ChromeDriver; launches the target in a real browser |
 | API | `RestAssuredSecurityTests` | none (built in) |
 | API | `OwaspApiTop10Checks` | none; `API_TOKEN_A` / `API_TOKEN_B` for authz checks |
 | API | `SchemathesisRunner` | `schemathesis` + OpenAPI spec (`--spec`) |
@@ -137,6 +138,32 @@ traffic to the captured BSSC host. The request schemas and authentication flow p
 inventory, so no request bodies or live OTP/payment operations are fabricated. Use only a separately authorized
 staging environment when adding integration tests for those flows. API security findings can be included in the
 framework's existing HTML, JSON, and SARIF reports by enabling the API scanners.
+
+### VE Portal dashboard tests
+
+`VePortalDashboardTest` provides Java/Selenium smoke, navigation and passive HTTPS-header checks for the dashboard:
+
+```bash
+mvn -Ddashboard.test.url=https://pp-dev.veportal.in/client/dashboard \
+    -Ddashboard.test.capture=true \
+    -Dtest=VePortalDashboardTest test
+```
+
+Chrome opens visibly by default during the tests and scanner run. Set `DASHBOARD_TEST_HEADLESS=true` or configure
+`headless: "true"` under `selenium-dashboard` for background execution. Set `DASHBOARD_TEST_URL` or
+`DASHBOARD_TEST_INSECURE_TLS=true` for environment-based configuration. Chrome must be installed. Login credentials are
+intentionally not embedded; authenticated actions require a separately implemented approved login flow.
+The `selenium-dashboard` scanner additionally checks the configured `loginPath` (default `/login`) using one
+non-destructive single-quote input and a deliberately invalid password, then reports visible database error signatures.
+This only detects error disclosure; a clean result does not prove the login is free of SQL injection. Keep the scanner
+limited to explicitly authorized hosts in `scan.allowed.hosts`.
+The HTML/JSON/SARIF output also records `SQL_LOGIN_001` through `SQL_LOGIN_010` as `NOT_RUN`; authentication-bypass,
+UNION/stacked-statement, encoded, and oversized-input cases are not submitted by the external-target scanner.
+
+For the approved VE Portal staging host, `.\scripts\run-veportal-safe-scan.ps1` runs a ZAP baseline scan and the
+Selenium dashboard check, then creates HTML/JSON/SARIF reports. The runner restricts its URL to HTTPS on
+`pp-dev.veportal.in`; Docker is required for ZAP. It does not run active ZAP scans, authentication bypasses, blind/time-based
+SQL injection checks, or destructive tests. Use a dedicated test environment for deeper verification.
 
 ## CI
 * `.github/workflows/security.yml` - static scans on every push/PR + nightly, SARIF upload to code scanning, optional staging DAST job.

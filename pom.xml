@@ -22,7 +22,7 @@
     <restassured.version>5.5.0</restassured.version>
     <junit.version>5.10.2</junit.version>
 
-    <main.class>com.company.security.orchestrator.ScanOrchestrator</main.class>
+    <main.class>com.venTech.security.orchestrator.ScanOrchestrator</main.class>
   </properties>
 
   <dependencies>
@@ -64,6 +64,13 @@
       <groupId>io.rest-assured</groupId>
       <artifactId>rest-assured</artifactId>
       <version>${restassured.version}</version>
+    </dependency>
+
+    <!-- Selenium browser tests -->
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>4.25.0</version>
     </dependency>
 
     <!-- Email -->

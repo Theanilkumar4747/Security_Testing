@@ -1,12 +1,82 @@
-2026-11-10T18:33:39,321 INFO  [main] com.company.security.scanners.api.RestAssuredSecurityTests - restassured-security-tests started
-2026-11-10T18:33:40,521 INFO  [main] com.company.security.scanners.api.RestAssuredSecurityTests - restassured-security-tests finished in 1215 ms with 5 findings
-2026-11-10T18:33:40,608 INFO  [main] com.company.security.scanners.api.OwaspApiTop10Checks - owasp-api-top10 started
-2026-11-10T18:33:41,002 INFO  [main] com.company.security.scanners.api.OwaspApiTop10Checks - owasp-api-top10 finished in 395 ms with 11 findings
-2026-11-10T18:33:41,035 WARN  [main] com.company.security.scanners.api.OwaspApiTop10Checks - owasp-api-top10 refused to scan an unauthorized target host '127.0.0.1'
-2026-11-10T18:33:41,307 WARN  [main] com.company.security.scanners.dast.ZAPScanner - zap refused to scan an unauthorized target host 'not-allowed.example.org'
-2026-11-11T13:26:48,929 INFO  [main] com.company.security.scanners.api.RestAssuredSecurityTests - restassured-security-tests started
-2026-11-11T13:26:50,425 INFO  [main] com.company.security.scanners.api.RestAssuredSecurityTests - restassured-security-tests finished in 1541 ms with 5 findings
-2026-11-11T13:26:50,562 INFO  [main] com.company.security.scanners.api.OwaspApiTop10Checks - owasp-api-top10 started
-2026-11-11T13:26:51,021 INFO  [main] com.company.security.scanners.api.OwaspApiTop10Checks - owasp-api-top10 finished in 459 ms with 11 findings
-2026-11-11T13:26:51,053 WARN  [main] com.company.security.scanners.api.OwaspApiTop10Checks - owasp-api-top10 refused to scan an unauthorized target host '127.0.0.1'
-2026-11-11T15:26:57,858 WARN  [main] com.company.security.scanners.dast.ZAPScanner - zap refused to scan an unauthorized target host 'not-allowed.example.org'
+2026-11-18T18:10:29,897 INFO  [main] com.venTech.security.scanners.api.RestAssuredSecurityTests - restassured-security-tests started
+2026-11-18T18:10:31,125 INFO  [main] com.venTech.security.scanners.api.RestAssuredSecurityTests - restassured-security-tests finished in 1244 ms with 5 findings
+2026-11-18T18:10:31,231 INFO  [main] com.venTech.security.scanners.api.OwaspApiTop10Checks - owasp-api-top10 started
+2026-11-18T18:10:31,657 INFO  [main] com.venTech.security.scanners.api.OwaspApiTop10Checks - owasp-api-top10 finished in 427 ms with 11 findings
+2026-11-18T18:10:31,781 WARN  [main] com.venTech.security.scanners.api.OwaspApiTop10Checks - owasp-api-top10 refused to scan an unauthorized target host '127.0.0.1'
+2026-11-18T18:10:32,125 WARN  [main] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-HSTS-MISSING | Strict Transport Security header missing | https://pp-dev.veportal.in/client/dashboard
+2026-11-18T18:10:32,126 WARN  [main] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-NOSNIFF-MISSING | X-Content-Type-Options header missing | https://pp-dev.veportal.in/client/dashboard
+2026-11-18T18:10:32,126 WARN  [main] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-SQLI-ERROR | Database error exposed by login input | https://pp-dev.veportal.in/login
+2026-11-18T18:10:32,129 WARN  [main] com.venTech.security.scanners.dast.ZAPScanner - zap refused to scan an unauthorized target host 'pp-dev-no-access.veportal.in'
+2026-11-18T18:10:34,939 WARN  [main] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-HSTS-MISSING | Strict Transport Security header missing | https://pp-dev.veportal.in/client/dashboard
+2026-11-18T18:10:34,940 WARN  [main] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-NOSNIFF-MISSING | X-Content-Type-Options header missing | https://pp-dev.veportal.in/client/dashboard
+2026-11-18T18:12:31,134 WARN  [main] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-HSTS-MISSING | Strict Transport Security header missing | https://pp-dev.veportal.in
+2026-11-18T18:12:31,143 WARN  [main] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-NOSNIFF-MISSING | X-Content-Type-Options header missing | https://pp-dev.veportal.in
+2026-11-18T18:21:11,941 WARN  [main] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-HSTS-MISSING | Strict Transport Security header missing | https://pp-dev.veportal.in/client/dashboard
+2026-11-18T18:21:11,949 WARN  [main] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-NOSNIFF-MISSING | X-Content-Type-Options header missing | https://pp-dev.veportal.in/client/dashboard
+2026-11-18T18:21:11,950 WARN  [main] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-SQLI-ERROR | Database error exposed by login input | https://pp-dev.veportal.in/login
+2026-11-18T18:21:11,955 WARN  [main] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-HSTS-MISSING | Strict Transport Security header missing | https://pp-dev.veportal.in/client/dashboard
+2026-11-18T18:21:11,955 WARN  [main] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-NOSNIFF-MISSING | X-Content-Type-Options header missing | https://pp-dev.veportal.in/client/dashboard
+2026-11-18T18:21:11,956 WARN  [main] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-SQLI-CHECKED | Login SQL injection error-disclosure probe completed | https://pp-dev.veportal.in/login
+2026-11-18T18:21:12,078 WARN  [main] com.venTech.security.scanners.dast.ZAPScanner - zap refused to scan an unauthorized target host 'pp-dev-no-access.veportal.in'
+2026-11-18T18:21:18,357 WARN  [main] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-HSTS-MISSING | Strict Transport Security header missing | https://pp-dev.veportal.in
+2026-11-18T18:21:18,357 WARN  [main] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-NOSNIFF-MISSING | X-Content-Type-Options header missing | https://pp-dev.veportal.in
+2026-11-18T18:22:24,547 INFO  [main] com.venTech.security.scanners.api.RestAssuredSecurityTests - restassured-security-tests started
+2026-11-18T18:22:25,741 INFO  [main] com.venTech.security.scanners.api.RestAssuredSecurityTests - restassured-security-tests finished in 1210 ms with 5 findings
+2026-11-18T18:22:25,829 INFO  [main] com.venTech.security.scanners.api.OwaspApiTop10Checks - owasp-api-top10 started
+2026-11-18T18:22:26,253 INFO  [main] com.venTech.security.scanners.api.OwaspApiTop10Checks - owasp-api-top10 finished in 426 ms with 11 findings
+2026-11-18T18:22:26,276 WARN  [main] com.venTech.security.scanners.api.OwaspApiTop10Checks - owasp-api-top10 refused to scan an unauthorized target host '127.0.0.1'
+2026-11-18T18:22:26,544 WARN  [main] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-HSTS-MISSING | Strict Transport Security header missing | https://pp-dev.veportal.in/client/dashboard
+2026-11-18T18:22:26,545 WARN  [main] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-NOSNIFF-MISSING | X-Content-Type-Options header missing | https://pp-dev.veportal.in/client/dashboard
+2026-11-18T18:22:26,545 WARN  [main] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-SQLI-ERROR | Database error exposed by login input | https://pp-dev.veportal.in/login
+2026-11-18T18:22:26,548 WARN  [main] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-HSTS-MISSING | Strict Transport Security header missing | https://pp-dev.veportal.in/client/dashboard
+2026-11-18T18:22:26,548 WARN  [main] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-NOSNIFF-MISSING | X-Content-Type-Options header missing | https://pp-dev.veportal.in/client/dashboard
+2026-11-18T18:22:26,548 WARN  [main] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-SQLI-CHECKED | Login SQL injection error-disclosure probe completed | https://pp-dev.veportal.in/login
+2026-11-18T18:22:26,553 WARN  [main] com.venTech.security.scanners.dast.ZAPScanner - zap refused to scan an unauthorized target host 'pp-dev-no-access.veportal.in'
+2026-11-18T18:22:29,668 WARN  [main] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-HSTS-MISSING | Strict Transport Security header missing | https://pp-dev.veportal.in/client/dashboard
+2026-11-18T18:22:29,669 WARN  [main] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-NOSNIFF-MISSING | X-Content-Type-Options header missing | https://pp-dev.veportal.in/client/dashboard
+2026-11-18T18:22:58,541 INFO  [main] com.venTech.security.orchestrator.ScanOrchestrator - Starting security scan for target 'application' (host: pp-dev.veportal.in)
+2026-11-18T18:22:58,544 INFO  [main] com.venTech.security.orchestrator.ScanOrchestrator - Reports and raw scanner output will be written to C:\Users\pc\Downloads\security-automation-framework\security-automation-framework\target\security-reports
+2026-11-18T18:22:58,637 INFO  [main] com.venTech.security.orchestrator.ScanOrchestrator - Selected 1 scanner(s): [selenium-dashboard]
+2026-11-18T18:22:58,645 INFO  [scan-worker] com.venTech.security.scanners.dast.SeleniumDashboardScanner - selenium-dashboard started
+2026-11-18T18:23:03,903 INFO  [scan-worker] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Login SQL injection probe completed: tested=true, databaseErrorDetected=false
+2026-11-18T18:23:06,017 INFO  [scan-worker] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Browser launched for https://pp-dev.veportal.in/client/dashboard
+2026-11-18T18:23:06,018 INFO  [scan-worker] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Dashboard result: URL=https://pp-dev.veportal.in/client/dashboard, currentStatus=200, HSTS=null, X-Content-Type-Options=null
+2026-11-18T18:23:06,026 WARN  [scan-worker] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-HSTS-MISSING | Strict Transport Security header missing | https://pp-dev.veportal.in/client/dashboard
+2026-11-18T18:23:06,027 WARN  [scan-worker] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-NOSNIFF-MISSING | X-Content-Type-Options header missing | https://pp-dev.veportal.in/client/dashboard
+2026-11-18T18:23:06,027 WARN  [scan-worker] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-SQLI-CHECKED | Login SQL injection error-disclosure probe completed | https://pp-dev.veportal.in/login
+2026-11-18T18:23:06,027 INFO  [scan-worker] com.venTech.security.scanners.dast.SeleniumDashboardScanner - selenium-dashboard finished in 7386 ms with 3 findings
+2026-11-18T18:23:06,029 INFO  [main] com.venTech.security.orchestrator.ScanOrchestrator - All selected scanners finished: 1 succeeded, 0 failed, 0 skipped
+2026-11-18T18:23:06,030 INFO  [main] com.venTech.security.orchestrator.ScanOrchestrator - Evaluating quality gate for scan run da52c1eb
+2026-11-18T18:23:06,034 INFO  [main] com.venTech.security.orchestrator.ScanOrchestrator - Quality gate evaluation complete: PASSED (0 violation(s))
+2026-11-18T18:23:06,059 INFO  [main] com.venTech.security.reporting.ReportGenerator - Generated HTML report: C:\Users\pc\Downloads\security-automation-framework\security-automation-framework\target\security-reports\security-report.html
+2026-11-18T18:23:06,150 INFO  [main] com.venTech.security.reporting.ReportGenerator - Generated JSON report: C:\Users\pc\Downloads\security-automation-framework\security-automation-framework\target\security-reports\security-report.json
+2026-11-18T18:23:06,155 INFO  [main] com.venTech.security.reporting.ReportGenerator - Generated SARIF report: C:\Users\pc\Downloads\security-automation-framework\security-automation-framework\target\security-reports\security-report.sarif
+2026-11-18T18:23:06,155 INFO  [main] com.venTech.security.orchestrator.ScanOrchestrator - Generated report artifacts: [target\security-reports\security-report.html, target\security-reports\security-report.json, target\security-reports\security-report.sarif]
+2026-11-18T18:23:06,164 INFO  [main] com.venTech.security.orchestrator.ScanOrchestrator - Wrote quality gate result to C:\Users\pc\Downloads\security-automation-framework\security-automation-framework\target\security-reports\gate-result.json
+2026-11-18T18:23:06,164 INFO  [main] com.venTech.security.orchestrator.ScanOrchestrator - Report publishing and notifications disabled by --no-publish
+2026-11-18T18:23:06,165 INFO  [main] com.venTech.security.gate.BuildBreaker - QUALITY GATE PASSED (0 finding(s) suppressed)
+2026-11-18T18:23:06,166 INFO  [main] com.venTech.security.orchestrator.ScanOrchestrator - Scan run da52c1eb completed with exit code 0
+2026-11-18T18:25:33,590 WARN  [main] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-HSTS-MISSING | Strict Transport Security header missing | https://pp-dev.veportal.in/client/dashboard
+2026-11-18T18:25:33,601 WARN  [main] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-NOSNIFF-MISSING | X-Content-Type-Options header missing | https://pp-dev.veportal.in/client/dashboard
+2026-11-18T18:27:29,335 INFO  [main] com.venTech.security.scanners.api.RestAssuredSecurityTests - restassured-security-tests started
+2026-11-18T18:27:30,713 INFO  [main] com.venTech.security.scanners.api.RestAssuredSecurityTests - restassured-security-tests finished in 1416 ms with 5 findings
+2026-11-18T18:27:30,832 INFO  [main] com.venTech.security.scanners.api.OwaspApiTop10Checks - owasp-api-top10 started
+2026-11-18T18:27:31,256 INFO  [main] com.venTech.security.scanners.api.OwaspApiTop10Checks - owasp-api-top10 finished in 425 ms with 11 findings
+2026-11-18T18:27:31,320 WARN  [main] com.venTech.security.scanners.api.OwaspApiTop10Checks - owasp-api-top10 refused to scan an unauthorized target host '127.0.0.1'
+2026-11-18T18:48:20,514 INFO  [main] com.venTech.security.scanners.api.RestAssuredSecurityTests - restassured-security-tests started
+2026-11-18T18:48:21,790 INFO  [main] com.venTech.security.scanners.api.RestAssuredSecurityTests - restassured-security-tests finished in 1296 ms with 5 findings
+2026-11-18T18:48:21,890 INFO  [main] com.venTech.security.scanners.api.OwaspApiTop10Checks - owasp-api-top10 started
+2026-11-18T18:48:22,452 INFO  [main] com.venTech.security.scanners.api.OwaspApiTop10Checks - owasp-api-top10 finished in 563 ms with 11 findings
+2026-11-18T18:48:22,571 WARN  [main] com.venTech.security.scanners.api.OwaspApiTop10Checks - owasp-api-top10 refused to scan an unauthorized target host '127.0.0.1'
+2026-11-18T18:48:22,833 WARN  [main] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-HSTS-MISSING | Strict Transport Security header missing | https://pp-dev.veportal.in/client/dashboard
+2026-11-18T18:48:22,833 WARN  [main] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-NOSNIFF-MISSING | X-Content-Type-Options header missing | https://pp-dev.veportal.in/client/dashboard
+2026-11-18T18:48:22,833 WARN  [main] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-SQLI-ERROR | Database error exposed by login input | https://pp-dev.veportal.in/login
+2026-11-18T18:48:22,838 WARN  [main] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-HSTS-MISSING | Strict Transport Security header missing | https://pp-dev.veportal.in/client/dashboard
+2026-11-18T18:48:22,838 WARN  [main] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-NOSNIFF-MISSING | X-Content-Type-Options header missing | https://pp-dev.veportal.in/client/dashboard
+2026-11-18T18:48:22,838 WARN  [main] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-SQLI-CHECKED | Login SQL injection error-disclosure probe completed | https://pp-dev.veportal.in/login
+2026-11-18T18:48:22,846 WARN  [main] com.venTech.security.scanners.dast.ZAPScanner - zap refused to scan an unauthorized target host 'pp-dev-no-access.veportal.in'
+2026-11-18T18:48:22,852 WARN  [main] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-HSTS-MISSING | Strict Transport Security header missing | https://pp-dev.veportal.in/client/dashboard
+2026-11-18T18:48:22,853 WARN  [main] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-NOSNIFF-MISSING | X-Content-Type-Options header missing | https://pp-dev.veportal.in/client/dashboard
+2026-11-18T18:48:22,853 WARN  [main] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-SQLI-SCOPE | Combined login SQL injection cases not executed | https://pp-dev.veportal.in/login
+2026-11-18T18:48:25,734 WARN  [main] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-HSTS-MISSING | Strict Transport Security header missing | https://pp-dev.veportal.in/client/dashboard
+2026-11-18T18:48:25,735 WARN  [main] com.venTech.security.scanners.dast.SeleniumDashboardScanner - Finding: SELENIUM-NOSNIFF-MISSING | X-Content-Type-Options header missing | https://pp-dev.veportal.in/client/dashboard

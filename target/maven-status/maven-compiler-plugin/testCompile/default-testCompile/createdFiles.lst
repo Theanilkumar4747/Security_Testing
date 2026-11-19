@@ -1,6 +1,8 @@
-com\company\security\sast\SastScanTest.class
-com\company\security\api\ApiSecurityTest.class
-com\company\security\api\BsscApiContractTest.class
-com\company\security\dast\DastScanTest.class
-com\company\security\model\TargetTest.class
-com\company\security\regression\SecurityRegressionTest.class
+com\venTech\security\sast\SastScanTest.class
+com\venTech\security\api\ApiSecurityTest.class
+com\venTech\security\regression\SecurityRegressionTest.class
+com\venTech\security\api\BsscApiContractTest.class
+com\venTech\security\dast\DastScanTest.class
+com\venTech\security\scanners\dast\SeleniumSqlErrorDetectionTest.class
+com\venTech\security\dast\VePortalDashboardTest.class
+com\venTech\security\model\TargetTest.class

@@ -85,7 +85,7 @@ jobs:
       - name: Run DAST + API scans
         env:
           SCAN_URL: ${{ github.event.inputs.dast_target || vars.STAGING_URL }}
-          SCAN_ALLOWED_HOSTS: ${{ vars.STAGING_HOST }}      # explicit allow-list, e.g. staging.example.com
+          SCAN_ALLOWED_HOSTS: ${{ vars.STAGING_HOST }}      # explicit allow-list, e.g. pp-dev.veportal.in
           API_TOKEN_A: ${{ secrets.API_TOKEN_A }}
           API_TOKEN_B: ${{ secrets.API_TOKEN_B }}
         run: |

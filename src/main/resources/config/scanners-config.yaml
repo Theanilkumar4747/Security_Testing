@@ -49,6 +49,14 @@ scanners:
   burp:
     enabled: false          # needs a running Burp Pro with REST API (burp.api.url / burp.api.key)
     timeoutMinutes: 90
+  selenium-dashboard:
+    enabled: false
+    timeoutMinutes: 10
+    options:
+      headless: "false"
+      screenshot: "true"
+      sqlInjectionCheck: "true"
+      loginPath: /login
 
   # ---------------- API ----------------
   restassured-security-tests:
